@@ -49,10 +49,11 @@ public class GameTest {
     @Test
     public void show_game_history() {
         List<GuessResult> guessResults = new ArrayList<>();
-        Answer answer = mock(Answer.class);
-        guessResults.add(new GuessResult("1 2 3 4", answer));
+        guessResults.add(new GuessResult("1 2 3 4", Answer.createAnswer("2 1 3 0")));
+        guessResults.add(new GuessResult("5 6 7 8", Answer.createAnswer("3 1 2 0")));
         gameView.showGuessHistory(guessResults);
-        System.out.println(outContent.toString());
+        String excepted="Guess History:\r\n[Guess Numbers: 2 1 3 0, Guess Result: 1 2 3 4]\r\n[Guess Numbers: 3 1 2 0, Guess Result: 5 6 7 8]";
+        assertThat(outContent.toString().trim(), equalTo(excepted));
     }
 
     @Test
