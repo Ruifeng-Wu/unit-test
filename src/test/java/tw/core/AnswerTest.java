@@ -34,14 +34,14 @@ public class AnswerTest {
 
 
     @Test(expected = OutOfRangeAnswerException.class)
-    public void validate() throws Exception {
+    public void should_return_exception_when_number_out_of_range() throws Exception {
         String str = "1 12 3 4";
         Answer answer = Answer.createAnswer(str);
         answer.validate();
     }
 
     @Test
-    public void check() {
+    public void should_return_record_object() {
         Answer answer = Answer.createAnswer("1 2 3 4");
         Answer inputAnswer = Answer.createAnswer("1 2 4 5");
         Object obj = answer.check(inputAnswer);
@@ -56,7 +56,7 @@ public class AnswerTest {
     }
 
     @Test
-    public void to_string() {
+    public void should_return_answer_string_when_toString_method_called() {
         Answer answer = Answer.createAnswer("1 2 3 4");
         assertEquals("1 2 3 4", answer.toString());
     }

@@ -2,7 +2,6 @@ package tw.core.generator;
 
 import org.junit.Test;
 import tw.core.Answer;
-import tw.core.exception.OutOfRangeAnswerException;
 
 import java.lang.reflect.Field;
 
@@ -26,7 +25,7 @@ public class AnswerGeneratorTest {
     }
 
     @Test
-    public void generate_return_answer() throws Exception {
+    public void return_answer_object() throws Exception {
         RandomIntGenerator randomIntGenerator = new RandomIntGenerator();
         AnswerGenerator answerGenerator = new AnswerGenerator(randomIntGenerator);
         Object obj = answerGenerator.generate();

@@ -42,7 +42,7 @@ public class GameControllerTest {
     }
 
     @Test
-    public void begin_game() throws Exception {
+    public void should_return_game_begin_string() throws Exception {
         gameController.beginGame();
         assertThat(outContent.toString().trim(), equalTo("------Guess Number Game, You have 6 chances to guess!  ------"));
     }

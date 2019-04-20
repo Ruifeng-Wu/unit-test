@@ -31,7 +31,7 @@ public class GameTest {
     }
 
     @Test
-    public void show_guess_result() {
+    public void should_return_guess_result() {
         String str = "1A0B";
         GuessResult guessResult = mock(GuessResult.class);
         when(guessResult.getResult()).thenReturn(str);

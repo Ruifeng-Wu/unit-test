@@ -21,7 +21,7 @@ public class RandomIntGeneratorTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void generate_nums_throws_exception() {
+    public void should_return_exception_when_parameter_invalid() {
         generator.generateNums(3, 4);
     }
 }
