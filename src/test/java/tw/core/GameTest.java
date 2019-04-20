@@ -40,14 +40,14 @@ public class GameTest {
     }
 
     @Test
-    public void show_game_status() {
+    public void should_return_game_status() {
         String str = "World";
         gameView.showGameStatus(str);
         assertThat(outContent.toString().trim(), equalTo("Game Status: " + str));
     }
 
     @Test
-    public void show_game_history() {
+    public void should_return_game_history() {
         List<GuessResult> guessResults = new ArrayList<>();
         guessResults.add(new GuessResult("1 2 3 4", Answer.createAnswer("2 1 3 0")));
         guessResults.add(new GuessResult("5 6 7 8", Answer.createAnswer("3 1 2 0")));
@@ -57,7 +57,7 @@ public class GameTest {
     }
 
     @Test
-    public void show_begin() throws Exception {
+    public void should_return_game_begin_string() throws Exception {
         gameView.showBegin();
         assertThat(outContent.toString().trim(), equalTo("------Guess Number Game, You have 6 chances to guess!  ------"));
     }

@@ -25,7 +25,7 @@ public class AnswerGeneratorTest {
     }
 
     @Test
-    public void return_answer_object() throws Exception {
+    public void should_return_answer_object() throws Exception {
         RandomIntGenerator randomIntGenerator = new RandomIntGenerator();
         AnswerGenerator answerGenerator = new AnswerGenerator(randomIntGenerator);
         Object obj = answerGenerator.generate();

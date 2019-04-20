@@ -28,7 +28,7 @@ public class InputValidatorTest {
     }
 
     @Test
-    public void string_to_list() throws Exception {
+    public void should_return_number_list() throws Exception {
         Method method = inputValidatorClass.getDeclaredMethod("numStrToList", String.class);
         method.setAccessible(true);
         List<String> obj = (List<String>) method.invoke(inputValidator, numStr);

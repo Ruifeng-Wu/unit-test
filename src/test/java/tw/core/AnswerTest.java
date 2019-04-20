@@ -27,7 +27,7 @@ public class AnswerTest {
     }
 
     @Test
-    public void create_answer() {
+    public void should_return_answer_object() {
         String str = "1 2 3 4";
         assertTrue("should return true", Answer.createAnswer(str) instanceof Answer);
     }
